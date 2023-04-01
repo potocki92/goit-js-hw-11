@@ -19,6 +19,15 @@ let lightbox = new SimpleLightbox('.photo-card a', {
   captionDelay: 250,
 });
 
+const handleIntersection = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      observer.unobserve(entry.target);
+      loadMore();
+    }
+  });
+};
+
 searchForm.addEventListener('submit', event => {
   event.preventDefault();
   const searchQuery = event.target.elements.searchQuery.value.trim();
