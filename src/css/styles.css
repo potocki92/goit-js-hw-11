@@ -12,7 +12,11 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-  display: flexblock;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
 }
 
 .search-form {
@@ -23,7 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px 0 20px 0;
-  background-color: rgb(37, 90, 139);
+  background-color: #4053b8;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -55,8 +59,11 @@ body {
 
 .info {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  height: 30%;
+  font-size: 13px;
 }
 
 .info-item {
@@ -119,11 +126,18 @@ body {
     height: 70%;
   }
 }
-.load-more {
+.is-hidden {
   visibility: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: #212121;
+.load-more {
+  height: 35px;
+  width: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  background-color: #4053B8;
+  color: #fafafa;
+  border-radius: 3px;
 }
